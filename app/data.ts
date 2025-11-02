@@ -51,25 +51,25 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Atech Training',
     title: 'Embedded Software Engineer',
-    start: 'May 2025',
+    start: 'May',
     end: 'Aug 2025',
-    link: 'https://ibelick.com',
+    link: '/experience/atech-training',
     id: 'work1',
   },
   {
     company: 'Motz Engineering',
     title: 'Software Developer Co-op',
-    start: 'Aug 2024',
+    start: 'Aug',
     end: 'Dec 2024',
-    link: 'https://ibelick.com',
+    link: '/experience/motz-engineering',
     id: 'work2',
   },
   {
     company: 'JODO',
     title: 'Software Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    start: 'Jun',
+    end: 'Jul 2023',
+    link: '/experience/jodo',
     id: 'work3',
   },
 ]
@@ -109,7 +109,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://github.com/kee5625',
   },
   {
-    label: 'X/Twitter',
+    label: 'X',
     link: 'https://x.com/rachamka',
   },
   {
