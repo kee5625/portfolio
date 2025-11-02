@@ -49,24 +49,24 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
+    company: 'Atech Training',
+    title: 'Embedded Software Engineer',
+    start: 'May 2025',
+    end: 'Aug 2025',
     link: 'https://ibelick.com',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
+    company: 'Motz Engineering',
+    title: 'Software Developer Co-op',
+    start: 'Aug 2024',
+    end: 'Dec 2024',
     link: 'https://ibelick.com',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
+    company: 'JODO',
+    title: 'Software Developer',
     start: '2017',
     end: 'Present',
     link: 'https://ibelick.com',
@@ -106,20 +106,20 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/kee5625',
   },
   {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    label: 'X/Twitter',
+    link: 'https://x.com/rachamka',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/karthikeya-rachamolla',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/_xkeex_/',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'rachamka@mail.uc.edu'
