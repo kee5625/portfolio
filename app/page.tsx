@@ -19,6 +19,7 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
+import { ProjectsCarousel } from '@/components/project-carousel'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -139,8 +140,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            CS @ University of Cincinnati | working toward building my own startup.
+            
           </p>
         </div>
       </motion.section>
@@ -172,6 +173,7 @@ export default function Personal() {
             </div>
           ))}
         </div>
+        <ProjectsCarousel />
       </motion.section>
 
       <motion.section
