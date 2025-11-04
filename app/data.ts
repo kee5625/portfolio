@@ -2,7 +2,7 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  image: string
   id: string
 }
 
@@ -33,26 +33,30 @@ export const PROJECTS: Project[] = [
     description:
       'Space Biology Research Engine - A unique way to visualize and research data.',
     link: 'https://gravitas-4hgt.vercel.app/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    image: '/gravitas.jpeg',
     id: 'project1',
   },
   {
     name: 'Phisherman',
-    description: 'UI kit to make beautiful, animated interfaces.',
+    description: 'A Chrome Extension that detects potential phishing emails in Gmail and Outlook.',
     link: 'https://github.com/kee5625/Phisherman',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    image: '/phisherman.png',
     id: 'project2',
   },
   {
     name: 'FastQP',
-    description: 'UI kit to make beautiful, animated interfaces.',
+    description: 'An adaptive query optimization engine using DuckDB.',
     link: 'https://github.com/kee5625/QP_fast',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    image: '/FastQP.png',
     id: 'project3',
   },
+  {
+    name: 'OrpheusAI',
+    description: 'An AI/ML powered assistant for enhanced patient diagnosis.',
+    link: 'https://github.com/kee5625/OrpheusAI',
+    image: '/orpheusAI.png',
+    id: 'project4',
+  }
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
