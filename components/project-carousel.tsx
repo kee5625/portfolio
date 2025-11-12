@@ -24,7 +24,7 @@ import {
 // Combined carousel: autoplay + spacing to show 3 items per view on large screens
 export function ProjectsCarousel() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: false, stopOnMouseEnter: false })
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: false })
   )
 
   return (

@@ -29,6 +29,14 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
+    name: 'Quartz',
+    description:
+      'A Chrome extension that protects sensitive data in prompts and optimizes LLM calls.',
+    link: 'https://github.com/kee5625/Quartz',
+    image: '/quartz.png',
+    id: 'project0',
+  },  
+  {
     name: 'Gravitas',
     description:
       'Space Biology Research Engine - A unique way to visualize and research data.',
