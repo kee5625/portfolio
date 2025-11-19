@@ -19,7 +19,7 @@ export function ActivitiesModals() {
           jobEnd=""
         >
           <div
-            className="relative overflow-hidden rounded-lg border border-border/60 bg-card p-[1px] transition-all hover:border-primary/40 hover:shadow-md"
+            className="cursor-pointer relative overflow-hidden rounded-lg border border-border/60 bg-card p-[1px] transition-all hover:border-primary/40 hover:shadow-md"
           >
             <Spotlight
               className="from-primary/15 via-primary/8 to-transparent blur-xl"

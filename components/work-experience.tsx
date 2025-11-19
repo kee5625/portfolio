@@ -19,7 +19,7 @@ export function WorkExperienceModals() {
           jobEnd={job.end}
         >
           <div
-            className="relative overflow-hidden rounded-xl border border-border bg-card p-[1px] transition-all hover:border-primary/50 hover:shadow-lg"
+            className="cursor-pointer relative overflow-hidden rounded-xl border border-border bg-card p-[1px] transition-all hover:border-primary/50 hover:shadow-lg"
           >
             <Spotlight
               className="from-primary/20 via-primary/10 to-transparent blur-2xl"
