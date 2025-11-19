@@ -4,7 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 
 export function WorkExperienceModals() {
   return (
-    <div className="grid gap-4">
+    <div className="flex flex-col space-y-3">
       {WORK_EXPERIENCE.map((job) => (
         <ModalButton
           key={job.id}
@@ -18,30 +18,32 @@ export function WorkExperienceModals() {
           jobStart={job.start}
           jobEnd={job.end}
         >
-          <a
-            className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-            rel="noopener noreferrer"
+          <div
+            className="relative overflow-hidden rounded-xl border border-border bg-card p-[1px] transition-all hover:border-primary/50 hover:shadow-lg"
           >
             <Spotlight
-              className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-              size={64}
+              className="from-primary/20 via-primary/10 to-transparent blur-2xl"
+              size={96}
             />
-            <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-              <div className="relative flex w-full flex-row justify-between">
-                <div>
-                  <h4 className="font-normal dark:text-zinc-100">{job.title}</h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">{job.company}</p>
+            <div className="relative h-full w-full rounded-[11px] bg-card p-5">
+              <div className="relative flex w-full flex-row items-start justify-between gap-4">
+                <div className="flex-1 space-y-1.5">
+                  <h4 className="font-semibold text-foreground leading-tight">{job.title}</h4>
+                  <p className="text-sm text-muted-foreground font-medium">{job.company}</p>
                 </div>
-                <p className="text-zinc-600 dark:text-zinc-400">
-                  {job.start} - {job.end}
-                </p>
+                <div className="shrink-0 text-right">
+                  <p className="text-xs text-muted-foreground whitespace-nowrap">
+                    {job.start}
+                  </p>
+                  <p className="text-xs text-muted-foreground whitespace-nowrap">
+                    {job.end}
+                  </p>
+                </div>
               </div>
             </div>
-          </a>
+          </div>
         </ModalButton>
       ))}
     </div>
   )
 }
-
-
