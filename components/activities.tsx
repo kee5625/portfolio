@@ -4,7 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 
 export function ActivitiesModals() {
   return (
-    <div className="flex flex-col space-y-3">
+    <div className="flex flex-col space-y-2.5">
       {BLOG_POSTS.map((post) => (
         <ModalButton
           key={post.uid}
@@ -19,16 +19,16 @@ export function ActivitiesModals() {
           jobEnd=""
         >
           <div
-            className="relative overflow-hidden rounded-xl border border-border bg-card p-[1px] transition-all hover:border-primary/50 hover:shadow-lg"
+            className="relative overflow-hidden rounded-lg border border-border/60 bg-card p-[1px] transition-all hover:border-primary/40 hover:shadow-md"
           >
             <Spotlight
-              className="from-primary/20 via-primary/10 to-transparent blur-2xl"
-              size={96}
+              className="from-primary/15 via-primary/8 to-transparent blur-xl"
+              size={80}
             />
-            <div className="relative h-full w-full rounded-[11px] bg-card p-5">
-              <div className="relative flex w-full flex-col gap-2">
-                <h4 className="font-semibold text-foreground leading-tight">{post.title}</h4>
-                <p className="text-sm text-muted-foreground">{post.description}</p>
+            <div className="relative h-full w-full rounded-[7px] bg-card p-4">
+              <div className="relative flex w-full flex-col gap-1.5">
+                <h4 className="font-medium text-foreground leading-tight">{post.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{post.description}</p>
               </div>
             </div>
           </div>
