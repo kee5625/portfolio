@@ -15,10 +15,13 @@ type WorkExperience = {
   id: string
 }
 
-type BlogPost = {
+type Activites = {
   title: string
   description: string
-  link: string
+  content: string
+  link1: string
+  link2: string
+  link3: string
   uid: string
 }
 
@@ -94,32 +97,44 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ]
 
-export const BLOG_POSTS: BlogPost[] = [
+export const ACTIVITIES: Activites[] = [
   {
     title: 'Web Dev Lead',
     description: 'RevolutionUC | one of the largest student hackathons in the midwest',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
+    link1: '',
+    link2: '',
+    link3: '',
+    content: 'Core Lead for the web team at RevolutionUC, managing a team of 5 developers to build and revamp RevUC\'s website.',
+    uid: 'activity-1',
   },
   {
     title: 'Hackathons',
     description:
       'Participated in 5+ hackathons and won 3 awards',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
+    link1: '',
+    link2: '',
+    link3: '',
+    content: 'Most Inspirational Project +  Global Nominee at NASA Space Apps. Security Track Winner at MakeUC25. Participated in Calhacks.',
+    uid: 'activity-2',
   },
   {
     title: 'Creative Interests',
     description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
+      'My core interests outside building and classes',
+    link1: '',
+    link2: '',
+    link3: '',
+    content: 'I enjoy playing the piano and have been learning it for over 6 years now. I also spend my free time playing open-world, fps, and adventure games.',
+    uid: 'activity-3',
   },
   {
     title: 'A little bit of this, and a little bit of that',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+    description: 'A series of experiments.',
+    link1: '',
+    link2: '',
+    link3: '',
+    content: 'Sometimes, I like to try everything. So here\'s a list of everything I\'ve tried so far: mainstream sports, painting, sketching, hardware projects, blogging, woodworking, graphic design, hiking, 3D printing, and so much more.',
+    uid: 'activity-4',
   },
 ]
 

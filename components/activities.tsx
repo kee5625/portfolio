@@ -1,22 +1,20 @@
-import { ModalButton } from "./modal"
-import { BLOG_POSTS } from "@/app/data"
+import { ActivityModal } from "./modal"
+import { ACTIVITIES } from "@/app/data"
 import { Spotlight } from "@/components/ui/spotlight"
 
 export function ActivitiesModals() {
   return (
     <div className="flex flex-col space-y-2.5">
-      {BLOG_POSTS.map((post) => (
-        <ModalButton
+      {ACTIVITIES.map((post) => (
+        <ActivityModal
           key={post.uid}
-          triggerText={post.title}
           title={post.title}
           description={post.description}
-          jobLink={post.link}
-          jobId={post.uid}
-          jobTitle={post.title}
-          jobCompany={post.title}
-          jobStart=""
-          jobEnd=""
+          content={post.content}
+          link1={post.link1}
+          link2={post.link2}
+          link3={post.link3}
+          uid={post.uid}
         >
           <div
             className="cursor-pointer relative overflow-hidden rounded-lg border border-border/60 bg-card p-[1px] transition-all hover:border-primary/40 hover:shadow-md"
@@ -32,7 +30,7 @@ export function ActivitiesModals() {
               </div>
             </div>
           </div>
-        </ModalButton>
+        </ActivityModal>
       ))}
     </div>
   )
