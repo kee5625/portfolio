@@ -80,9 +80,9 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: '/experience/atech-training',
     id: 'work1',
     content: [
-      'Developed embedded software solutions for training systems',
-      'Collaborated with cross-functional teams to implement real-time control systems',
-      'Optimized firmware performance and reliability',
+      'Built a React/Tailwind app that connects to devices via Web Bluetooth API',
+      'Developed embedded systems with FreeRTOS across multiple microcontrollers, enabling UART, BLE, and CAN communication',
+      'Designed an ESP32-based vehicle diagnostic system for real-time data display, improving diagnostics by 40%',
     ],
   },
   {
@@ -93,9 +93,9 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: '/experience/motz-engineering',
     id: 'work2',
     content: [
-      'Built full-stack web applications for engineering workflows',
-      'Integrated APIs and databases to streamline data management',
-      'Implemented responsive UI components using modern frameworks',
+      'Built a C# WinForms deliverables manager using Access, Ajera API, and SQL',
+      'Developed a full-stack internal tool for detailed checklist, guideline, and design tracking',
+      'Overhauled an internal database tool to boost efficiency, clean up code, and add features',
     ],
   },
   {
@@ -106,8 +106,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: '/experience/jodo',
     id: 'work3',
     content: [
-      'Developed an automated invoice collection system which collects user data, formats it into designated invoice templates and sends clients digitalized invoices through email',
-      'Exhibited project management by participating in weekly team meetings, brainstorming ideas, making design decisions, and delegating tasks',
+      'Built an automated system using google scripts to collect data, generate invoices, and email them to clients',
+      'Led a team through meetings, ideation, design choices, and task delegation.',
     ],
   },
 ]
