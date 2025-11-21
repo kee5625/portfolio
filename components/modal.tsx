@@ -22,6 +22,7 @@ interface ModalButtonProps {
   jobCompany: string
   jobStart: string
   jobEnd: string
+  content?: string[]
   children?: ReactNode
 }
 
@@ -35,6 +36,7 @@ export function ModalButton({
   jobCompany,
   jobStart,
   jobEnd,
+  content,
   children,
 }: ModalButtonProps) {
   return (
@@ -43,14 +45,22 @@ export function ModalButton({
         <DialogTrigger asChild>
           {children || <Button variant="outline">{triggerText}</Button>}
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[600px]">
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{description}</DialogDescription>
           </DialogHeader>
-          <div className="grid gap-4">
-            {/* Modal content goes here */}
-            <p>More details about {jobCompany} coming soon...</p>
+          <div className="grid gap-4 py-4">
+            {content && content.length > 0 && (
+              <div className="space-y-2">
+                <h4 className="text-sm font-semibold text-foreground">Key Responsibilities:</h4>
+                <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                  {content.map((item, index) => (
+                    <li key={index} className="leading-relaxed">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <DialogFooter>
             <DialogClose asChild>
@@ -66,12 +76,13 @@ export function ModalButton({
 interface ActivityModalProps {
   title: string
   description: string
-  content: string
+  content?: string[]
   link1?: string
   link2?: string
   link3?: string
   uid: string
   children?: ReactNode
+  
 }
 
 export function ActivityModal({
@@ -95,45 +106,16 @@ export function ActivityModal({
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          {content && (
-            <div className="text-sm text-foreground">
-              <p>{content}</p>
-            </div>
-          )}
-          {(link1 || link2 || link3) && (
-            <div className="flex flex-col gap-2">
-              {link1 && (
-                <a
-                  href={link1}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:underline"
-                >
-                  Link 1
-                </a>
-              )}
-              {link2 && (
-                <a
-                  href={link2}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:underline"
-                >
-                  Link 2
-                </a>
-              )}
-              {link3 && (
-                <a
-                  href={link3}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:underline"
-                >
-                  Link 3
-                </a>
-              )}
-            </div>
-          )}
+          {content && content.length > 0 && (
+              <div className="space-y-2">
+                <h4 className="text-sm font-semibold text-foreground">Highlights:</h4>
+                <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                  {content.map((item, index) => (
+                    <li key={index} className="leading-relaxed">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
         </div>
         <DialogFooter>
           <DialogClose asChild>

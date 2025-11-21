@@ -13,12 +13,13 @@ type WorkExperience = {
   end: string
   link: string
   id: string
+  content: string[]
 }
 
-type Activites = {
+type Activities = {
   title: string
   description: string
-  content: string
+  content: string[]
   link1: string
   link2: string
   link3: string
@@ -78,6 +79,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Aug 2025',
     link: '/experience/atech-training',
     id: 'work1',
+    content: [
+      'Developed embedded software solutions for training systems',
+      'Collaborated with cross-functional teams to implement real-time control systems',
+      'Optimized firmware performance and reliability',
+    ],
   },
   {
     company: 'Motz Engineering',
@@ -86,6 +92,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Dec 2024',
     link: '/experience/motz-engineering',
     id: 'work2',
+    content: [
+      'Built full-stack web applications for engineering workflows',
+      'Integrated APIs and databases to streamline data management',
+      'Implemented responsive UI components using modern frameworks',
+    ],
   },
   {
     company: 'JODO',
@@ -94,17 +105,23 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Jul 2023',
     link: '/experience/jodo',
     id: 'work3',
+    content: [
+      'Developed an automated invoice collection system which collects user data, formats it into designated invoice templates and sends clients digitalized invoices through email',
+      'Exhibited project management by participating in weekly team meetings, brainstorming ideas, making design decisions, and delegating tasks',
+    ],
   },
 ]
 
-export const ACTIVITIES: Activites[] = [
+export const ACTIVITIES: Activities[] = [
   {
     title: 'Web Dev Lead',
     description: 'RevolutionUC | one of the largest student hackathons in the midwest',
     link1: '',
     link2: '',
     link3: '',
-    content: 'Core Lead for the web team at RevolutionUC, managing a team of 5 developers to build and revamp RevUC\'s website.',
+    content: [
+      'Core Lead for the web team at RevolutionUC',
+      'Managing a team of 5 developers to build and revamp RevUC\'s website.'],
     uid: 'activity-1',
   },
   {
@@ -114,7 +131,10 @@ export const ACTIVITIES: Activites[] = [
     link1: '',
     link2: '',
     link3: '',
-    content: 'Most Inspirational Project +  Global Nominee at NASA Space Apps. Security Track Winner at MakeUC25. Participated in Calhacks.',
+    content: [
+      'Most Inspirational Project +  Global Nominee at NASA Space Apps',
+      'Security Track Winner at MakeUC25', 
+      'Participated in Calhacks.'],
     uid: 'activity-2',
   },
   {
@@ -124,16 +144,18 @@ export const ACTIVITIES: Activites[] = [
     link1: '',
     link2: '',
     link3: '',
-    content: 'I enjoy playing the piano and have been learning it for over 6 years now. I also spend my free time playing open-world, fps, and adventure games.',
+    content: [
+      'I enjoy playing the piano and have been learning it for over 6 years now',
+      'I also spend my free time playing open-world, fps, and adventure games.'],
     uid: 'activity-3',
   },
   {
-    title: 'A little bit of this, and a little bit of that',
+    title: 'A little bit of this, and a little bit of that ;)',
     description: 'A series of experiments.',
     link1: '',
     link2: '',
     link3: '',
-    content: 'Sometimes, I like to try everything. So here\'s a list of everything I\'ve tried so far: mainstream sports, painting, sketching, hardware projects, blogging, woodworking, graphic design, hiking, 3D printing, and so much more.',
+    content: ['Sometimes, I like to try everything! So here\'s a list of everything I\'ve tried so far: mainstream sports, painting, sketching, hardware projects, blogging, woodworking, graphic design, hiking, 3D printing, and so much more.'],
     uid: 'activity-4',
   },
 ]

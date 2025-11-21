@@ -17,6 +17,7 @@ export function WorkExperienceModals() {
           jobCompany={job.company}
           jobStart={job.start}
           jobEnd={job.end}
+          content={job.content}
         >
           <div
             className="cursor-pointer relative overflow-hidden rounded-xl border border-border bg-card p-[1px] transition-all hover:border-primary/50 hover:shadow-lg"
