@@ -5,14 +5,9 @@ import gsap from 'gsap'
 import Navbar from './Navbar'
 import { useLoadingContext } from '@/contexts/LoadingContext'
 
-const ROLES   = ['Creative', 'Fullstack', 'Founder', 'Scholar']
+const ROLES   = ['Builder', 'Student']
 const HLS_SRC = 'https://stream.mux.com/Gs3wZfrtz6ZfqZqQ02c02Z7lugV00FGZvRpcqFTel66r3g.m3u8'
 
-/* ─────────────────────────────────────────────────
-   Gradient-border CTA button
-   variant="filled"  → white bg, dark text; hover → dark bg + gradient ring
-   variant="outline" → dark bg, white text, stroke border; hover → gradient ring
-───────────────────────────────────────────────── */
 function GradientBorderBtn({
   children,
   variant,
@@ -158,13 +153,13 @@ export default function Hero() {
           >
             {ROLES[roleIndex]}
           </span>{' '}
-          lives in Chicago.
+          living in Cincinnati.
         </p>
 
         {/* Bio */}
         <p className="blur-in text-sm md:text-base text-muted leading-relaxed max-w-md mb-12">
-          Designing seamless digital interactions by focusing on the unique
-          nuances which bring systems to life.
+          Building high-performance software focused on speed, intelligence,
+          and seamless user experiences.
         </p>
 
         {/* CTA buttons */}
