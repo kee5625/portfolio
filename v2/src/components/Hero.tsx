@@ -146,8 +146,8 @@ export default function Hero() {
         </span>
 
         {/* Name — large display type */}
-        <h1 className="name-reveal text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight text-text mb-6">
-          Michael Smith
+        <h1 className="name-reveal text-5xl md:text-7xl lg:text-8xl font-display italic leading-[0.9] tracking-tight text-text mb-6">
+          Karthik Rachamolla
         </h1>
 
         {/* Role line with cycling word */}
