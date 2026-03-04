@@ -1,64 +1,78 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const PROJECTS = [
   {
     id: 1,
-    title: 'Aura Sync',
-    category: 'Creative Direction',
-    year: '2025',
-    img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop', // Abstract dark wave
+    title: "the-search-thing",
+    category: "AI",
+    year: "2026",
+    img: "/the-search-thing.png",
   },
   {
     id: 2,
-    title: 'Nova Core',
-    category: 'Fullstack Platform',
-    year: '2025',
-    img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1600&auto=format&fit=crop', // Dark tech/abstract
+    title: "Quartz",
+    category: "Creative Direction",
+    year: "2025",
+    img: "/quartz.png", // Abstract dark wave
   },
   {
     id: 3,
-    title: 'Echo UI',
-    category: 'Design Systems',
-    year: '2024',
-    img: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1600&auto=format&fit=crop', // Dark gradient art
+    title: "Gravitas",
+    category: "Fullstack Platform",
+    year: "2025",
+    img: "/gravitas.jpeg", // Dark tech/abstract
   },
   {
     id: 4,
-    title: 'Prism',
-    category: 'Web3 Identity',
-    year: '2024',
-    img: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1600&auto=format&fit=crop', // Abstract 3D shape
+    title: "FastQP",
+    category: "Design Systems",
+    year: "2024",
+    img: "/FastQP.png", // Dark gradient art
   },
-]
+  {
+    id: 5,
+    title: "Phisherman",
+    category: "Web3 Identity",
+    year: "2024",
+    img: "/phisherman.png", // Abstract 3D shape
+  },
+  {
+    id: 6,
+    title: "OrpheusAI",
+    category: "Web3 Identity",
+    year: "2024",
+    img: "/orpheusAI.png", // Abstract 3D shape
+  },
+];
 
 export default function ProjectGallery() {
-  const galleryRef = useRef<HTMLElement>(null)
+  const galleryRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Simple scroll-triggered stagger entrance for the gallery items
       gsap.fromTo(
-        '.gallery-item',
+        ".gallery-item",
         { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
           duration: 1,
           stagger: 0.15,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: galleryRef.current,
-            start: 'top 75%',
+            start: "top 75%",
           },
-        }
-      )
-    }, galleryRef)
+        },
+      );
+    }, galleryRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={galleryRef} className="py-32 px-4 md:px-12 max-w-7xl mx-auto">
@@ -68,7 +82,7 @@ export default function ProjectGallery() {
           SELECTED WORKS
         </span>
         <h2 className="text-5xl md:text-7xl font-display italic tracking-tight text-text">
-          Gallery.
+          PROJECTS.
         </h2>
       </div>
 
@@ -78,7 +92,7 @@ export default function ProjectGallery() {
           <div
             key={project.id}
             className={`gallery-item group relative cursor-pointer ${
-              index % 2 !== 0 ? 'md:mt-32' : '' // Increased stagger offset for horizontal images
+              index % 2 !== 0 ? "md:mt-32" : "" // Increased stagger offset for horizontal images
             }`}
           >
             {/* Image Container - Changed to aspect-video (16:9) */}
@@ -87,20 +101,22 @@ export default function ProjectGallery() {
               <div
                 className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  border: '2px solid transparent',
-                  background: 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%) border-box',
-                  WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
-                  WebkitMaskComposite: 'destination-out',
-                  maskComposite: 'exclude',
+                  border: "2px solid transparent",
+                  background:
+                    "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%) border-box",
+                  WebkitMask:
+                    "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "destination-out",
+                  maskComposite: "exclude",
                 }}
               />
-              
+
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              
+
               {/* Dark overlay for text contrast */}
               <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
             </div>
@@ -113,11 +129,13 @@ export default function ProjectGallery() {
                 </h3>
                 <p className="text-sm text-muted">{project.category}</p>
               </div>
-              <span className="text-xs text-muted font-mono mt-1">{project.year}</span>
+              <span className="text-xs text-muted font-mono mt-1">
+                {project.year}
+              </span>
             </div>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
