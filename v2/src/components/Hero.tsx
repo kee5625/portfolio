@@ -9,12 +9,19 @@ const ROLES = ["Builder", "Student"];
 const HLS_SRC =
   "https://stream.mux.com/Gs3wZfrtz6ZfqZqQ02c02Z7lugV00FGZvRpcqFTel66r3g.m3u8";
 
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
+
 function GradientBorderBtn({
   children,
   variant,
+  onClick,
 }: {
   children: React.ReactNode;
   variant: "filled" | "outline";
+  onClick?: () => void;
 }) {
   const isFilled = variant === "filled";
   return (
@@ -27,6 +34,7 @@ function GradientBorderBtn({
         }}
       />
       <button
+        onClick={onClick}
         className={`
           relative z-10 px-7 py-3.5 text-sm rounded-full
           transition-all duration-200 group-hover:scale-105
@@ -120,6 +128,7 @@ export default function Hero() {
 
   return (
     <section
+      id="home"
       ref={heroRef}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
@@ -167,8 +176,18 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <div className="blur-in flex items-center gap-4 flex-wrap justify-center">
-          <GradientBorderBtn variant="filled">See Works</GradientBorderBtn>
-          <GradientBorderBtn variant="outline">Reach out...</GradientBorderBtn>
+          <GradientBorderBtn
+            variant="filled"
+            onClick={() => scrollToSection("projects")}
+          >
+            See Works
+          </GradientBorderBtn>
+          <GradientBorderBtn
+            variant="outline"
+            onClick={() => scrollToSection("contact")}
+          >
+            Reach out...
+          </GradientBorderBtn>
         </div>
       </div>
 

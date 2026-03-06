@@ -1,37 +1,36 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function ResumeShowcase() {
-  const showcaseRef = useRef<HTMLElement>(null)
+  const showcaseRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        '.showcase-reveal',
-        { opacity: 0, y: 40, filter: 'blur(5px)' },
+        ".showcase-reveal",
+        { opacity: 0, y: 40, filter: "blur(5px)" },
         {
           opacity: 1,
           y: 0,
-          filter: 'blur(0px)',
+          filter: "blur(0px)",
           duration: 1.2,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: showcaseRef.current,
-            start: 'top 80%',
+            start: "top 80%",
           },
-        }
-      )
-    }, showcaseRef)
+        },
+      );
+    }, showcaseRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={showcaseRef} className="py-32 px-4 md:px-12 bg-bg relative">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-end gap-12 lg:gap-24">
-        
         {/* Left: The "Painting" Frame */}
         <div className="showcase-reveal relative w-full lg:w-2/3 shrink-0">
           {/* Outer Frame */}
@@ -66,20 +65,22 @@ export default function ResumeShowcase() {
           <h2 className="text-4xl md:text-5xl font-display italic tracking-tight text-text mb-8">
             The Blueprint.
           </h2>
-          
+
           {/* Museum Plaque */}
           <div className="bg-surface border border-stroke p-6 w-full max-w-sm mb-10 shadow-lg relative">
             {/* Pin detailing */}
             <div className="absolute top-3 left-3 w-1.5 h-1.5 rounded-full bg-stroke/80" />
             <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full bg-stroke/80" />
-            
-            <h3 className="text-lg font-display text-text">Karthik Rachamolla</h3>
+
+            <h3 className="text-lg font-display text-text">
+              Karthik Rachamolla
+            </h3>
             <p className="text-sm text-muted italic mt-1 mb-4">
               Software Developer
             </p>
             <div className="text-xs text-muted/80 space-y-1 font-mono">
               <p>MEDIUM: Portable Document Format</p>
-              <p>DIMENSIONS: 8.5" × 11"</p>
+              <p>DIMENSIONS: 8.5&quot; &times; 11&quot;</p>
               <p>LOCATION: Digital Archive</p>
             </div>
           </div>
@@ -89,8 +90,8 @@ export default function ResumeShowcase() {
             <span
               className="absolute rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
               style={{
-                inset: '-2px',
-                background: 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)',
+                inset: "-2px",
+                background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)",
               }}
             />
             <a
@@ -98,15 +99,24 @@ export default function ResumeShowcase() {
               download
               className="relative z-10 inline-flex items-center gap-2 px-7 py-3.5 bg-bg text-text text-sm rounded-full border-2 border-stroke transition-all duration-200 group-hover:scale-105 group-hover:bg-surface"
             >
-              Download PDF 
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              Download PDF
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
             </a>
           </div>
         </div>
-
       </div>
+
+      {/* Anchor for "Reach out" CTA — sits at the bottom of the resume section */}
+      <div id="contact" />
     </section>
-  )
+  );
 }
