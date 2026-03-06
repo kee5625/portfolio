@@ -119,7 +119,7 @@ function SayHiButton() {
         }}
       />
       <button
-        onClick={() => scrollTo("resume")}
+        onClick={() => scrollTo("contact")}
         className="relative z-10 text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-muted group-hover:text-text transition-colors duration-200 bg-surface backdrop-blur-md">
         Say hi ↗
       </button>

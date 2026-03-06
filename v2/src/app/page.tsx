@@ -8,6 +8,7 @@ import AppWrapper from "@/components/AppWrapper";
 import Hero from "@/components/Hero";
 import ProjectGallery from "@/components/ProjectGallery";
 import ResumeShowcase from "@/components/ResumeShowcase";
+import ContactSection from "@/components/ContactsSection";
 
 export default function Home() {
   // Register ScrollTrigger globally for the page
@@ -25,6 +26,9 @@ export default function Home() {
         </div>
         <div id="resume">
           <ResumeShowcase />
+        </div>
+        <div id="contact">
+          <ContactSection />
         </div>
       </main>
     </AppWrapper>
