@@ -108,6 +108,7 @@ function LogoButton({ onClick }: { onClick: () => void }) {
 
 /* ─── "Say hi" button ─── */
 function SayHiButton() {
+  
   return (
     <div className="relative group">
       <span
@@ -117,7 +118,9 @@ function SayHiButton() {
           background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)",
         }}
       />
-      <button className="relative z-10 text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-muted group-hover:text-text transition-colors duration-200 bg-surface backdrop-blur-md">
+      <button
+        onClick={() => scrollTo("resume")}
+        className="relative z-10 text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-muted group-hover:text-text transition-colors duration-200 bg-surface backdrop-blur-md">
         Say hi ↗
       </button>
     </div>
