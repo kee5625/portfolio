@@ -8,6 +8,16 @@ export default function ResumeShowcase() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Floating ambient background glow
+      gsap.to(".ambient-glow-resume", {
+        x: "-10vw",
+        y: "-5vh",
+        duration: 10,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
       gsap.fromTo(
         ".showcase-reveal",
         { opacity: 0, y: 40, filter: "blur(5px)" },
@@ -29,8 +39,21 @@ export default function ResumeShowcase() {
   }, []);
 
   return (
-    <section ref={showcaseRef} className="py-32 px-4 md:px-12 bg-bg relative">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-end gap-12 lg:gap-24">
+    <section ref={showcaseRef} className="relative py-32 px-4 md:px-12 bg-bg overflow-hidden">
+      {/* 
+        Fixed Floating Purple Ambient Background 
+        Using a radial-gradient to ensure perfectly soft, feathered edges (no blobs!)
+      */}
+      <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-end">
+        <div 
+          className="ambient-glow-resume absolute -right-[20%] w-[80vw] h-[80vw] opacity-40"
+          style={{
+            background: "radial-gradient(circle, rgba(123, 44, 191, 0.4) 0%, rgba(60, 9, 108, 0.1) 40%, rgba(10, 10, 10, 0) 70%)"
+          }}
+        />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row items-center lg:items-end gap-12 lg:gap-24">
         {/* Left: The "Painting" Frame */}
         <div className="showcase-reveal relative w-full lg:w-2/3 shrink-0">
           {/* Outer Frame */}
@@ -87,11 +110,12 @@ export default function ResumeShowcase() {
 
           {/* Download Button */}
           <div className="relative group">
+            {/* Purple Gradient border */}
             <span
               className="absolute rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
               style={{
                 inset: "-2px",
-                background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)",
+                background: "linear-gradient(90deg, #C77DFF 0%, #3C096C 100%)",
               }}
             />
             <a

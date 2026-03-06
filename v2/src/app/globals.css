@@ -2,57 +2,70 @@
 
 /* ─── Tailwind v4 Theme Configuration ─── */
 @theme {
-  /* Color tokens mapped to our CSS variables */
-  --color-bg: var(--bg);
-  --color-surface: var(--surface);
-  --color-text: var(--text);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-stroke: var(--stroke);
+    /* Color tokens mapped to our CSS variables */
+    --color-bg: var(--bg);
+    --color-surface: var(--surface);
+    --color-text: var(--text);
+    --color-muted: var(--muted);
+    --color-accent: var(--accent);
+    --color-stroke: var(--stroke);
 
-  /* Typography */
-  --font-display: var(--font-display), Georgia, serif;
-  --font-body: var(--font-body), system-ui, sans-serif;
+    /* Typography */
+    --font-display: var(--font-display), Georgia, serif;
+    --font-body: var(--font-body), system-ui, sans-serif;
+    --font-hero: var(--font-hero), system-ui, sans-serif;
 
-  /* Custom Animations */
-  --animate-scroll-down: scroll-down 1.5s ease-in-out infinite;
-  --animate-fade-in: fade-in 0.4s ease-out forwards;
+    /* Custom Animations */
+    --animate-scroll-down: scroll-down 1.5s ease-in-out infinite;
+    --animate-fade-in: fade-in 0.4s ease-out forwards;
 
-  @keyframes scroll-down {
-    0%   { transform: translateY(-100%); }
-    100% { transform: translateY(200%); }
-  }
+    @keyframes scroll-down {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(200%);
+        }
+    }
 
-  @keyframes fade-in {
-    0%   { opacity: 0; transform: translateY(8px); }
-    100% { opacity: 1; transform: translateY(0);   }
-  }
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 /* ─── Theme Values ─── */
 [data-theme="dark"] {
-  --bg:      #0a0a0a;
-  --surface: #141414;
-  --text:    #f5f5f5;
-  --muted:   #888888;
-  --accent:  #f5f5f5;
-  --stroke:  #1f1f1f;
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --text: #f5f5f5;
+    --muted: #888888;
+    --accent: #f5f5f5;
+    --stroke: #1f1f1f;
 }
 
 /* ─── Base Styles ─── */
 @layer base {
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-  }
+    body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
 }

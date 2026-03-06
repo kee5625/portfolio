@@ -159,7 +159,7 @@ export default function Hero() {
         </span>*/}
 
         {/* Name — large display type */}
-        <h1 className="name-reveal text-5xl md:text-7xl lg:text-8xl font-display font-semibold italic leading-[0.9] tracking-tight text-text mb-6">
+        <h1 className="name-reveal text-4xl md:text-6xl lg:text-[5rem] font-hero font-extrabold leading-[0.9] tracking-tight text-text mb-6">
           Karthik Rachamolla
         </h1>
 
