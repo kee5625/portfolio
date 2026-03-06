@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -227,30 +228,48 @@ export default function ContactSection() {
                 <span className="block text-xs text-muted uppercase tracking-widest mb-4">
                   Digital Presence
                 </span>
-                <div className="flex gap-4">
+                <div className="flex gap-6 items-center">
                   <a
                     href="https://github.com/kee5625"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-12 h-12 rounded-full border border-stroke flex items-center justify-center text-muted hover:text-[#C77DFF] hover:border-[#C77DFF] transition-all"
+                    className="opacity-60 hover:opacity-100 transition-opacity duration-200"
                   >
-                    GH
+                    <Image
+                      src="/github.svg"
+                      alt="GitHub"
+                      width={28}
+                      height={28}
+                      className="invert"
+                    />
                   </a>
                   <a
                     href="https://linkedin.com/in/karthikeya-rachamolla"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-12 h-12 rounded-full border border-stroke flex items-center justify-center text-muted hover:text-[#C77DFF] hover:border-[#C77DFF] transition-all"
+                    className="opacity-60 hover:opacity-100 transition-opacity duration-200"
                   >
-                    IN
+                    <Image
+                      src="/linkedin.svg"
+                      alt="LinkedIn"
+                      width={28}
+                      height={28}
+                      className=""
+                    />
                   </a>
                   <a
                     href="https://twitter.com/rachamka"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-12 h-12 rounded-full border border-stroke flex items-center justify-center text-muted hover:text-[#C77DFF] hover:border-[#C77DFF] transition-all"
+                    className="opacity-60 hover:opacity-100 transition-opacity duration-200"
                   >
-                    X
+                    <Image
+                      src="/X.svg"
+                      alt="X"
+                      width={28}
+                      height={28}
+                      className="invert"
+                    />
                   </a>
                 </div>
               </div>
