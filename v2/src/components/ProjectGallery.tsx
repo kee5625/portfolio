@@ -6,41 +6,48 @@ import gsap from "gsap";
 const PROJECTS = [
   {
     id: 1,
+    title: 'ivy',
+    category: 'agents',
+    year: "2026",
+    img: "/logo.jpg"
+  },
+  {
+    id: 2,
     title: "the-search-thing",
     category: "AI",
     year: "2026",
     img: "/the-search-thing.png",
   },
   {
-    id: 2,
+    id: 3,
     title: "Quartz",
     category: "Creative Direction",
     year: "2025",
     img: "/quartz.png", // Abstract dark wave
   },
   {
-    id: 3,
+    id: 4,
     title: "Gravitas",
     category: "Fullstack Platform",
     year: "2025",
     img: "/gravitas.jpeg", // Dark tech/abstract
   },
   {
-    id: 4,
+    id: 5,
     title: "FastQP",
     category: "Design Systems",
     year: "2024",
     img: "/FastQP.png", // Dark gradient art
   },
   {
-    id: 5,
+    id: 6,
     title: "Phisherman",
     category: "Web3 Identity",
     year: "2024",
     img: "/phisherman.png", // Abstract 3D shape
   },
   {
-    id: 6,
+    id: 7,
     title: "OrpheusAI",
     category: "Web3 Identity",
     year: "2024",
