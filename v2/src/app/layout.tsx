@@ -1,32 +1,38 @@
-import type { Metadata } from 'next'
-import { Inter, Instrument_Serif } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter, Cormorant_Garamond } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-})
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-display',
-  display: 'swap',
-})
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Michael Smith — Portfolio',
-  description: 'Creative · Fullstack · Founder · Scholar',
-}
+  title: "Karthik Rachamolla — Portfolio",
+  description: "Creative · Student · Builder",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" data-theme="dark">
-      <body className={`${inter.variable} ${instrumentSerif.variable} bg-bg text-text`}>
+      <body
+        className={`${inter.variable} ${cormorantGaramond.variable} bg-bg text-text`}
+      >
         {children}
       </body>
     </html>
-  )
+  );
 }
