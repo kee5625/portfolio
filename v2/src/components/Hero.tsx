@@ -116,16 +116,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/hero-bg.jpg"
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
+          autoPlay muted loop playsInline
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover hue-rotate-[160deg] contrast-125 saturate-150"
         />
-        {/* Subtle darkening overlay */}
-        <div className="absolute inset-0 bg-black/20" />
-        {/* Bottom gradient — blends into page bg (#0a0a0a) */}
+        {/* Darkening overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+        {/* Bottom gradient */}
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-bg to-transparent" />
       </div>
 

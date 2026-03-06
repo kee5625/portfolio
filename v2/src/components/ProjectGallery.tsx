@@ -20,24 +20,24 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "Quartz",
-    category: "Creative Direction",
-    year: "2025",
-    img: "/quartz.png", // Abstract dark wave
-  },
-  {
-    id: 4,
     title: "Gravitas",
     category: "Fullstack Platform",
     year: "2025",
     img: "/gravitas.jpeg", // Dark tech/abstract
   },
   {
+    id: 4,
+    title: "Quartz",
+    category: "Creative Direction",
+    year: "2025",
+    img: "/quartz.png", // Abstract dark wave
+  },
+  {
     id: 5,
     title: "FastQP",
     category: "Design Systems",
     year: "2024",
-    img: "/FastQP.png", // Dark gradient art
+    img: "/FastQP.jpg", // Dark gradient art
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const PROJECTS = [
     title: "OrpheusAI",
     category: "Web3 Identity",
     year: "2024",
-    img: "/orpheusAI.png", // Abstract 3D shape
+    img: "/orpheusAI.jpg", // Abstract 3D shape
   },
 ];
 
