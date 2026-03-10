@@ -203,7 +203,7 @@ export default function ContactSection() {
                   Direct Email
                 </span>
                 <a
-                  href="mailto:hello@karthik.dev"
+                  href="mailto:rachamka@mail.uc.edu"
                   className="text-2xl md:text-3xl font-display text-text hover:text-[#C77DFF] transition-colors"
                 >
                   rachamka@mail.uc.edu
@@ -216,7 +216,7 @@ export default function ContactSection() {
                   Phone
                 </span>
                 <a
-                  href="tel:+15550000000"
+                  href="tel:+19177287669"
                   className="text-2xl md:text-3xl font-display text-text hover:text-[#C77DFF] transition-colors"
                 >
                   +1 (917) 728-7669
