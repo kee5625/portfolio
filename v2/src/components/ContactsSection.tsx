@@ -9,6 +9,19 @@ export default function ContactSection() {
   const [formStatus, setFormStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
+  const [emailError, setEmailError] = useState<string>("");
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const validateEmail = (value: string) => {
+    if (!value) {
+      setEmailError("Email is required.");
+    } else if (!EMAIL_REGEX.test(value)) {
+      setEmailError("Please enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -45,6 +58,15 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const emailValue = (
+      e.currentTarget.elements.namedItem("email") as HTMLInputElement
+    ).value;
+    if (!EMAIL_REGEX.test(emailValue)) {
+      validateEmail(emailValue);
+      return;
+    }
+
     setFormStatus("submitting");
 
     const formData = new FormData(e.currentTarget);
@@ -134,9 +156,20 @@ export default function ContactSection() {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-transparent border-b border-stroke pb-3 text-text focus:outline-none focus:border-[#C77DFF] transition-colors peer"
+                    onChange={(e) => validateEmail(e.target.value)}
+                    onBlur={(e) => validateEmail(e.target.value)}
+                    className={`w-full bg-transparent border-b pb-3 text-text focus:outline-none transition-colors peer ${
+                      emailError
+                        ? "border-red-500 focus:border-red-500"
+                        : "border-stroke focus:border-[#C77DFF]"
+                    }`}
                     placeholder="john@example.com"
                   />
+                  {emailError && (
+                    <span className="absolute left-0 top-full mt-1 text-xs text-red-500">
+                      {emailError}
+                    </span>
+                  )}
                 </div>
               </div>
 
